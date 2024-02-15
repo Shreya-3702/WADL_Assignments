@@ -211,8 +211,8 @@
             password.on('change', () => {
                 const passwordVal = password.val().trim();
                 if (passwordVal.length < 8) {
-                    alert("min 8 chars required");
-                    setErrorMessage(password, "min 8 chars required");
+                    alert("Password should contain min 8 chars ");
+                    setErrorMessage(password, "Password should contain min 8 chars ");
                 }
                 else if (passwordVal == "") {
                     alert("password should not be empty");
@@ -240,9 +240,9 @@
             })
             pincode.on('change', () => {
                 const pincodeVal = pincode.val().trim();
-                if (pincodeVal.length == 6) {
-                    alert("6 digits required");
-                    setErrorMessage(pincode, "6 digits required");
+                if (pincodeVal.length != 6) {
+                    alert("Pincode should contain 6 digits");
+                    setErrorMessage(pincode, "Pincode should contain 6 digits");
                 }
                 else if (pincodeVal == "") {
                     alert("pincode should not be empty");
